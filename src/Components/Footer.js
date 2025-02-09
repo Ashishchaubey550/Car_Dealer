@@ -5,7 +5,7 @@ import { FaPhoneAlt } from "react-icons/fa";
 
 function Footer() {
   return (
-    <div className=" h-96 bg-[#2f2e2e] w-full mt-18 flex flex-col justify-center">
+    <div className=" h-96 bg-[#2f2e2e] w-full flex flex-col justify-center">
       <h1 className="  py-2 border-b-2 border-[#756b6b]  text-yellow-300 font-semibold text-8xl uppercase mx-auto">
         Come Visit Us!
       </h1>

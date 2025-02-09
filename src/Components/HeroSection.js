@@ -13,6 +13,9 @@ import image6 from '../images/image6.webp';
 import image7 from '../images/image7.webp';
 import ProductList from './ProductList';
 import { CustomNextArrow, CustomPrevArrow } from './SlidderButton';
+import HeroBuy from './HeroBuy';
+import HeroMotivate from './HeroNeedHelp';
+import HeroNeedHelp from './HeroNeedHelp';
 function HeroSection() {
   // Slider settings
   const settings = {
@@ -32,22 +35,23 @@ function HeroSection() {
 
   return (
     <>
-    <div className=' overflow-w-hidden '>
-    <div className="relative h-screen w-full">
-      <Slider {...settings} className="h-full">
+    <div className=''>
+    <div className=" relative w-full">
+      <Slider {...settings} className="">
         {images.map((img, index) => (
           <div key={index}>
-            <img src={img} alt={`Slide ${index + 1}`} className="w-full h-full object-cover" />
+            <img  src={img} alt={`Slide ${index + 1}`} className="w-full h-[700px] object-cover" />
           </div>
         ))}
       </Slider>
-    </div>
-    <h1 className=' w-full mt-20 text-7xl font-bold flex justify-center'> NEW ARRIVALS </h1>
-    <div className=' mt-0 flex items-center bg-cover h-screen w-[100%]'>
-        <ProductList/>
-      </div>
+      <div className="max-w-screen-xl bottom-5 absolute mx-auto bg-[#2f2e2e] flex justify-evenly items-center py-6 px-20">
+      hello
     </div>
 
+    </div>
+    </div>
+    <HeroBuy/>
+    <HeroNeedHelp/>
     </>
 
   );

@@ -4,13 +4,18 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import 'remixicon/fonts/remixicon.css';
+import '@mantine/carousel/styles.css';
 
+// Import MantineProvider
+import { MantineProvider } from '@mantine/core';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
+  <MantineProvider withGlobalStyles withNormalizeCSS>
+    <React.StrictMode>
+      <App />
+    </React.StrictMode>
+  </MantineProvider>,
 );
 
 // If you want to start measuring performance in your app, pass a function

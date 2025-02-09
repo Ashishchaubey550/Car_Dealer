@@ -1,0 +1,22 @@
+[
+  {
+    "icon": "https://cdn.cars24.com/prod/cms/2025/01/02/625e22ee-a532-44e9-be48-14563e46d7cdloans.png",
+    "heading": "Loan24",
+    "subheading": "Quick Loan"
+  },
+  {
+    "icon": "https://cdn.cars24.com/prod/cms/2025/01/02/930e7c9d-5375-41ab-8743-c21345761368Service.png",
+    "heading": "Car",
+    "subheading": "service history"
+  },
+  {
+    "icon": "https://cdn.cars24.com/prod/cms/2025/01/02/5167277b-d9c7-42b7-b28d-fbb87599ae74repair.png",
+    "heading": "Car",
+    "subheading": "Inspection"
+  },
+  {
+    "icon": "https://cdn.cars24.com/prod/cms/2025/01/02/29714638-75be-4230-9a25-3a2bc3419fa9RTO.png",
+    "heading": "BharatRTO",
+    "subheading": "Challan & RTO check"
+  }
+]

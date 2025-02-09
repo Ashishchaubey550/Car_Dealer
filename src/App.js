@@ -9,6 +9,8 @@ import LocomotiveScroll from 'locomotive-scroll';
 import Services from './Components/Services';
 import Footer from './Components/Footer';
 import ScrollToTop from './Components/ScrollTop';
+import '@mantine/carousel/styles.css';
+
 
 
 function App() {

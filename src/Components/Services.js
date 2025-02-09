@@ -2,7 +2,7 @@ import React from 'react'
 
 function Services() {
   return (
-    <div>Services</div>
+    <div className='h-screen bg-neutral-300'>Services</div>
   )
 }
 

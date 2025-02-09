@@ -80,7 +80,11 @@ function ProductList() {
   };
 
   return (
-    <div className="product-list-container">
+    <div className=" flex">
+      <div className=" w-[400px] bg-green-500">
+      Hello
+    </div>
+          <div className="product-list-container">
       <input
         className="search-input"
         type="text"
@@ -146,7 +150,9 @@ function ProductList() {
           ))}
         </div>
       ) : (
+        <div className=" h-96 flex justify-center items-center">
         <p className="no-products">No products found</p>
+        </div>
       )}
 
       <Modal isOpen={isModalOpen} onRequestClose={closeModal} className="full-view-modal max-w-screen-md mx-auto">
@@ -158,6 +164,9 @@ function ProductList() {
         )}
       </Modal>
     </div>
+
+    </div>
+
   );
 }
 
