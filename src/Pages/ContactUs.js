@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { FaVolumeUp, FaVolumeMute } from 'react-icons/fa';
-import video from './video.mp4';
+import video from '../images/video.mp4';
 
 function ContactUs() {
     const videoRef = useRef(null);

@@ -1,10 +1,5 @@
 import React from "react";
 import banner from "../images/AboutCar.png";
-import AboutSlider from "./AboutSlider";
-import OurScale from "./OurScale";
-import AboutDont from "./AboutService";
-import AboutService from "./AboutService";
-import AboutSus from "./AboutSus";
 function AboutUs() {
   return (
     <>
@@ -22,10 +17,6 @@ function AboutUs() {
           <br></br>
           <p>We are on the journey of a lifetime and seeking those who share our hunger for growth and innovation.</p>
         </div>
-        <AboutSlider/>
-        <OurScale/>
-        <AboutService/>
-        <AboutSus/>
       </div>
     </>
   );

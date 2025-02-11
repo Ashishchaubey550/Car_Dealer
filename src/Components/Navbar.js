@@ -1,8 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom"; 
 import LOGO from '../images/LOgo.png'
+import { Button } from "@mantine/core";
+import { useEffect , useState, setIsScrolled } from "react";
 
 const Navbar = () => {
+  const [isScrolled, setIsScrolled] = useState(false);
+
   const navLink = [
     {name: "Home", path:"/"},
     { name: "ProductList", path:"/productList" },
@@ -10,8 +14,23 @@ const Navbar = () => {
     { name: "Contact Us", path: "/ContactUs" },
     { name: "Services", path: "/services" },
   ];
+
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 10) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
-    <div className="max-w-screen-3xl mx-auto bg-[#2f2e2e] flex justify-evenly items-center py-6 px-20">
+    <div className={` border-b-gray-300  border w-full transition-all duration-300 ease-in justify-between px-10 py-2 z-10 fixed flex items-center & ${isScrolled ? "bg-white shadow-md " : "bg-transparent text-white "}`}>
       <div>
         <img src={LOGO} alt="" className=" w-20 bg-white h-20"/>
       </div>
@@ -20,11 +39,14 @@ const Navbar = () => {
           <Link
             key={index}
             to={elem.path}
-            className=" text-white text-[1.1rem] ml-5 hover:text-[#756d6d] "
+            className={`font-semibold hover:text-red-500 text-[1.2rem] ml-5 `}
           >
             {elem.name}
           </Link>
         ))}
+      </div>
+      <div>
+        <Button className=" bg-red-500  py-3 px-4 rounded-lg text-white hover:text-black hover:bg-neutral-300 font-semibold transition-all duration-500 ease-in">+91-7987200339</Button>
       </div>
     </div>
   );

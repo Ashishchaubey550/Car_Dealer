@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Slider from "react-slick";
-import FullViewSlider from "./FullViewSlider";
+import FullViewSlider from "../Components/FullViewSlider";
 import Modal from "react-modal";
 import "../CSS/ProductList.css";
 

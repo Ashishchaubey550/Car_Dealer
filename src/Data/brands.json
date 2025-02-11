@@ -1,0 +1,35 @@
+[
+    {
+      "name": "Toyota",
+      "image": "https://example.com/images/toyota.png"
+    },
+    {
+      "name": "Honda",
+      "image": "https://example.com/images/honda.png"
+    },
+    {
+      "name": "BMW",
+      "image": "https://example.com/images/bmw.png"
+    },
+    {
+      "name": "Audi",
+      "image": "https://example.com/images/audi.png"
+    },
+    {
+      "name": "Mercedes",
+      "image": "https://example.com/images/mercedes.png"
+    },
+    {
+      "name": "Ford",
+      "image": "https://example.com/images/ford.png"
+    },
+    {
+      "name": "Hyundai",
+      "image": "https://example.com/images/hyundai.png"
+    },
+    {
+      "name": "Tesla",
+      "image": "https://example.com/images/tesla.png"
+    }
+  ]
+  
