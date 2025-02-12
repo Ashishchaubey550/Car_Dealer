@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import ApointMent from "../Components/ApointMent";
 
 // Import your images
 import image7 from "../images/image7.webp";
@@ -44,6 +45,7 @@ function HeroSection() {
           </div>
         </div>
         <BrandFilter/>
+        <ApointMent/>
       </div>    
     </>
   );
