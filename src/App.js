@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { BrowserRouter, Route, Routes, useLocation } from 'react-router-dom';  // Ensure this is correctly imported
 import Navbar from './Components/Navbar';
 import 'remixicon/fonts/remixicon.css';
 import LocomotiveScroll from 'locomotive-scroll';
@@ -11,32 +11,41 @@ import AboutUs from './Pages/AboutUs';
 import ContactUs from './Pages/ContactUs';
 import Services from './Pages/Services';
 import BrandDetails from './Components/BrandDetails';
-
-
+import { useEffect } from 'react';
 
 function App() {
+  return (
+    <BrowserRouter>
+      <AppContent />
+    </BrowserRouter>
+  );
+}
+
+function AppContent() {
+  const location = useLocation();  // useLocation hook is now inside the BrowserRouter context
   const locomotiveScroll = new LocomotiveScroll();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);  // Scroll to top on route change
+  }, [location]);
 
   return (
     <div className="h-full w-full relative">
-      <BrowserRouter>
-      <div className=' relative'>
-      <Navbar />
+      <div className='relative'>
+        <Navbar />
         <Routes>
           {/* Define individual routes */}
-          <Route path="/" element={<HeroSection/>} />
-          <Route path="/productList" element={<ProductList/>} />
-          <Route path="/AboutUs" element={<AboutUs/>} />
-          <Route path="/ContactUs" element={<ContactUs/>} />
-          <Route path="/services" element={<Services/>} />
+          <Route path="/" element={<HeroSection />} />
+          <Route path="/productList" element={<ProductList />} />
+          <Route path="/AboutUs" element={<AboutUs />} />
+          <Route path="/ContactUs" element={<ContactUs />} />
+          {/* <Route path="/services" element={<Services/>} /> */}
           <Route path="/products/:brand" element={<ProductList />} />
-          <Route path="/brand/:brandName" element={<BrandDetails/>} />
-          </Routes>
-        <ScrollToTop/>
-        <Footer/>
+          <Route path="/brand/:brandName" element={<BrandDetails />} />
+        </Routes>
+        <ScrollToTop />
+        <Footer />
       </div>
-
-      </BrowserRouter>
     </div>
   );
 }

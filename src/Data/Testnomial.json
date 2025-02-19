@@ -1,0 +1,63 @@
+[
+    {
+      "name": "Crystal Lew",
+      "designation": "Instructor",
+      "testimonial": "I was amazed at the quality of car wash. Car wash has really helped our business. I like car wash more and more each day because it makes my life a lot easier.",
+      "rating": 5
+    },
+    {
+      "name": "James Carter",
+      "designation": "Software Engineer",
+      "testimonial": "This service exceeded my expectations! The results were outstanding, and I highly recommend it to everyone.",
+      "rating": 5
+    },
+    {
+      "name": "Emily Rose",
+      "designation": "Marketing Manager",
+      "testimonial": "The best investment I've made this year! It saved me so much time and effort.",
+      "rating": 4
+    },
+    {
+      "name": "Daniel Smith",
+      "designation": "Entrepreneur",
+      "testimonial": "Very professional and efficient. I am truly impressed with the outcome.",
+      "rating": 5
+    },
+    {
+      "name": "Sophia Johnson",
+      "designation": "Designer",
+      "testimonial": "I couldn't be happier with the service. It’s affordable and reliable!",
+      "rating": 5
+    },
+    {
+      "name": "Michael Brown",
+      "designation": "Photographer",
+      "testimonial": "Fantastic experience! The team was friendly and the quality was top-notch.",
+      "rating": 4
+    },
+    {
+      "name": "Sarah Williams",
+      "designation": "Freelancer",
+      "testimonial": "Highly recommended! The process was smooth, and I will definitely return.",
+      "rating": 5
+    },
+    {
+      "name": "John Davis",
+      "designation": "Business Owner",
+      "testimonial": "A truly game-changing service. I can't imagine going without it now.",
+      "rating": 5
+    },
+    {
+      "name": "Emma Wilson",
+      "designation": "Consultant",
+      "testimonial": "I was hesitant at first, but now I’m completely satisfied with the service.",
+      "rating": 4
+    },
+    {
+      "name": "David Martinez",
+      "designation": "Project Manager",
+      "testimonial": "The quality and attention to detail were outstanding. Will recommend to friends and family!",
+      "rating": 5
+    }
+  ]
+  

@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import Slider from "react-slick";
+import Contactusbg from "../images/ContactUsbg.JPG";
 
 const BrandDetails = () => {
   const { brandName } = useParams();
@@ -31,9 +32,23 @@ const BrandDetails = () => {
 
   return (
     <div className="brand-details">
-      <h2 className="text-2xl font-bold mb-4">Brand: {brandName}</h2>
+            <div className="relative w-full">
+              <img
+                src={Contactusbg}
+                alt=""
+                className="w-full h-[650px] object-cover blur-[3px] border-l-neutral-950"
+              />
+              <div className="absolute inset-0 bg-black bg-opacity-40"></div>
+              <div className="absolute inset-0 flex flex-col items-center justify-center">
+                <span className="border border-gray-300 w-96 mb-4"></span>
+                <h1 className=" text-center font-extrabold text-5xl text-white">
+                  Contact us
+                </h1>
+                <span className="border border-gray-300 w-96 mt-4"></span>
+              </div>
+            </div>
+      <h2 className="text-2xl mt-20 font-bold mb-4">Brand: {brandName}</h2>
 
-      {/* ✅ Show products automatically */}
       {products.length > 0 ? (
         <div className="product-grid mt-4">
           {products.map((item) => (

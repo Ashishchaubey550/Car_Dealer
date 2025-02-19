@@ -3,11 +3,17 @@ import { Link } from "react-router-dom";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import ApointMent from "../Components/ApointMent";
+import CarTypeFilter from "../Components/CarTypeFilter";
 
 // Import your images
 import image7 from "../images/image7.webp";
 import { Button } from "@mantine/core";
 import BrandFilter from "../Components/BrandFilter";
+import Testnimoinal from "../Components/Testnimoinal";
+import CityCards from "../Components/CityCards";
+import FAQ from "../Components/FAQSection";
+import HeroInsight from "../Components/HeroInsight";
+import HowValueDriveWork from "../Components/HowValueDriveWork";
 function HeroSection() {
   // Slider settings
   const settings = {
@@ -44,8 +50,13 @@ function HeroSection() {
             </Link>
           </div>
         </div>
+        <HowValueDriveWork/>
+        <CarTypeFilter/>
         <BrandFilter/>
-        <ApointMent/>
+        {/* <CityCards/> */}
+        <HeroInsight/>
+        <Testnimoinal/>
+        <FAQ/>
       </div>    
     </>
   );
