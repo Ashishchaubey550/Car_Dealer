@@ -9,7 +9,7 @@ const Navbar = () => {
 
   const navLink = [
     {name: "Home", path:"/"},
-    { name: "ProductList", path:"/productList" },
+    { name: "Product List", path:"/productList" },
     { name: "About Us", path: "/AboutUs" },
     { name: "Contact Us", path: "/ContactUs" },
     // { name: "Services", path: "/services" },
@@ -46,7 +46,7 @@ const Navbar = () => {
         ))}
       </div>
       <div>
-        <Button className=" bg-red-500  py-3 px-4 rounded-lg text-white hover:text-white hover:bg-black font-semibold transition-all duration-500 ease-in">+91-7987200339</Button>
+        <Button className=" bg-red-500  py-3 px-4 rounded-lg text-white hover:text-white hover:bg-black font-semibold transition-all duration-500 ease-in">Book A Test Drive</Button>
       </div>
     </div>
   );

@@ -5,8 +5,8 @@ import testdrive from "../images/insight/testdrive.gif";
 
 function HeroInsight() {
   const details = [
-    { video: hello, point: "3.5/5", para: "Our average review rating",  },
-    { video: rating, point: "4.2/5", para: "Customer satisfaction",  },
+    { video: hello, point: "5/5", para: "Our average review rating",  },
+    { video: rating, point: "4.5/5", para: "Customer satisfaction",  },
     { video: testdrive, point: "80%", para: "Test drives completed",  },
   ];
 

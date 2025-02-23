@@ -40,7 +40,7 @@ function HeroSection() {
           <div className="absolute inset-0 bg-black bg-opacity-30"></div>
           <div className=" absolute top-1/3 translate-x-[50%] text-white text-center w-fit">
             <h1 className=" font-extrabold text-5xl ">
-              Welcom to <span className=" text-red-500">Value Drive</span>
+              Welcome to <span className=" text-red-500">Value Drive</span>
             </h1>
             <h2 className=" text-center font-semibold mt-2 text-xl">
               Your Trusted Partner for Quality Pre-Owned Cars

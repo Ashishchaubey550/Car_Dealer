@@ -12,7 +12,7 @@ function FullViewSlider({ product, closeModal, imageHeight = 400 }) {
   };
 
   return (
-    <div className="relative mt-20 bg-gray-100 max-w-screen-md px-12 mx-auto flex flex-col bg-gray-0">
+    <div className="relative mt-44 bg-gray-100 max-w-screen-md px-12 mx-auto flex flex-col bg-gray-0">
       <button
         onClick={closeModal}
         className="absolute -top-10 -right-10 text-xl bg-red-500 text-white py-1 px-3 rounded-full hover:bg-red-600"
@@ -51,6 +51,23 @@ function FullViewSlider({ product, closeModal, imageHeight = 400 }) {
         <p className="text-xl font-bold text-green-600">
           Price: ₹{product.price} Lakhs
         </p>
+        <p className="text-xl font-bold text-green-600">
+          Variant:  {product.variant}
+        </p>     
+           <p className="text-xl font-bold text-green-600">
+          Registration Year: {product.registrationYear}
+        </p>     
+           <p className="text-xl font-bold text-green-600">
+          Fuel Type: {product.fuelType}
+        </p>
+        <p className="text-xl font-bold text-green-600">
+          Fuel Type: {product.bodyType}
+        </p>
+        <p className="text-xl font-bold text-green-600">
+          Fuel Type: {product.transmissionType}
+        </p>
+        
+        
       </div>
     </div>
   );

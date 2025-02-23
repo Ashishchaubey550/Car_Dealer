@@ -11,12 +11,16 @@ const faqs = [
     answer: "The process is simple. You can book your car online or visit our nearest hub. Once you select a car, complete the paperwork, and the car is yours!",
   },
   {
-    question: "Will Value Drive help me with car finance?",
-    answer: "Yes, Spinny provides financing options with low-interest rates starting from 12.99%. You can apply for a loan directly through our platform.",
+    question: "Does Value Drive assist with car financing?  ",
+    answer: "Yes, Value Drive provides loan assistance and helps you secure financing through banks, ensuring a smooth and hassle-free process.",
   },
   {
-    question: "How does Value Drive money-back guarantee work?",
-    answer: "If you’re not satisfied with your purchase, you can return the car within a specified period for a full refund, no questions asked.",
+    question: "Does Value Drive provide a warranty on their cars?",
+    answer: "Yes, Value Drive offers a warranty on certified cars to ensure quality and reliability. Their vehicles go through thorough inspections before being sold.",
+  },
+  {
+    question: "What is the background of Value Drive?",
+    answer: "Established in 2019, Value Drive is a part of the renowned Ram Group. With a strong presence in the automotive industry, we have successfully sold over 5,000+ used cars to satisfied customers. Backed by a team of 2,000+ employees, Ram Group has strategic partnerships with leading brands such as Toyota, MG, Hyundai, Honda, Mercedes, and Ather, ensuring quality and trust in every transaction.",
   },
 ];
 

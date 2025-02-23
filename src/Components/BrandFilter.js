@@ -20,6 +20,8 @@ const BrandFilter = () => {
     "CHEVROLET": "/images/chevrolet.png",
     "KIA": "https://mda.spinny.com/spinny-web/media/cars/makes/kia/logos/v1.webp",
     "TATA": "https://mda.spinny.com/spinny-web/media/cars/makes/tata/logos/tata.webp",
+    "NISSAN":"https://e7.pngegg.com/pngimages/132/969/png-clipart-nissan-car-logo-automotive-industry-brand-nissan-emblem-trademark.png"
+
   };
 
   useEffect(() => {
@@ -36,7 +38,7 @@ const BrandFilter = () => {
           acc[brandName] = (acc[brandName] || 0) + 1;
           return acc;
         }, {});
-        setBrands(Object.entries(brandCounts).slice(0, 12)); // Limit to 12 brands
+        setBrands(Object.entries(brandCounts)); // Limit to 12 brands
       }
     } catch (error) {
       console.error("Error fetching brands:", error);

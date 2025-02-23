@@ -430,7 +430,7 @@ function ProductList() {
           {/* Clear Filters Button */}
           <div className="mb-4">
             <button
-              className="clear-filters-btn bg-gray-200 hover:bg-gray-300 p-2 rounded"
+              className="clear-filters-btn bg-red-500 text-sm text-white font-semibold px-2.5 py-3 rounded-lg hover:bg-black hover:text-white duration-300 transition-all ease-in-out"
               onClick={clearFilters}
             >
               Clear All Filters
@@ -621,7 +621,10 @@ function ProductList() {
                   <p className="product-bodyType">Body Type: {item.bodyType}</p>
                   <p className="product-fuelType">Fuel Type: {item.fuelType}</p>
                   <p className="product-price">Price: ₹{item.price} Lakhs</p>
-
+                  <p className="product-price">Variant: {item.variant}</p>
+                  <p className="product-price">Registration Year: {item.registrationYear}</p>
+                  <p className="product">Transmission Type: {item.transmissionType}</p>
+                  
                   <div className="product-actions">
                     <button
                       className="delete-button bg-green-500 hover:bg-green-600"
