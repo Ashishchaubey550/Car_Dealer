@@ -27,7 +27,7 @@ function FullViewSlider({ product, closeModal, imageHeight = 400 }) {
               <div key={idx} className="flex justify-center">
                 <img
                   className=" w-full"
-                  src={`http://localhost:8000${image}`}
+                  src={`https://car-dealer-backend-7m2r.onrender.com${image}`}
                   alt={`Product Image ${idx + 1}`}
                   style={{
                     maxHeight: `${imageHeight}px`, // Dynamically set height

@@ -30,7 +30,7 @@ const BrandFilter = () => {
 
   const fetchBrands = async () => {
     try {
-      const response = await fetch("http://localhost:8000/productlist");
+      const response = await fetch("https://car-dealer-backend-7m2r.onrender.com/productlist");
       const data = await response.json();
       if (data && data.length > 0) {
         const brandCounts = data.reduce((acc, item) => {

@@ -17,7 +17,7 @@ const CarTypeFilter = () => {
 
   const fetchCars = async (type) => {
     try {
-      const response = await fetch(`http://localhost:8000/productlist`);
+      const response = await fetch(`https://car-dealer-backend-7m2r.onrender.com/productlist`);
       const data = await response.json();
 
       // Normalize bodyType (remove spaces and lowercase)
@@ -79,7 +79,7 @@ const CarTypeFilter = () => {
                 {car.images?.map((image, idx) => (
                   <div key={idx} className="slider-image-container">
                     <img
-                      src={`http://localhost:8000${image}`}
+                      src={`https://car-dealer-backend-7m2r.onrender.com${image}`}
                       alt={`Car ${idx + 1}`}
                       className="w-full h-52 object-cover rounded-lg"
                     />

@@ -11,7 +11,7 @@ const PriceFilter = ({ onPriceChange }) => {
     // Fetch price range from the backend
     const fetchPriceRange = async () => {
       try {
-        const response = await fetch("http://localhost:8000/product");
+        const response = await fetch("https://car-dealer-backend-7m2r.onrender.com/product");
         const data = await response.json();
         
         // Assuming the data contains `minPrice` and `maxPrice`
