@@ -1,0 +1,10 @@
+.nav-links {
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  
+  .nav-links.open {
+    opacity: 1;
+    transform: translateY(0);
+  }

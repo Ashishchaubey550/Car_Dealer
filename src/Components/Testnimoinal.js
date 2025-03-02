@@ -45,19 +45,24 @@ function Testnimoinal() {
 
   return (
     <div
-      className='min-h-[50vh] max-w-screen-xl mx-auto mt-12 relative '
+      className='min-h-[50vh] max-w-screen-xl mx-auto mt-12 relative p-4 sm:p-8 lg:p-16'
       onMouseEnter={() => setHover(true)}
       onMouseLeave={() => setHover(false)}
     >
-      <div className='mb-6 flex justify-center items-center flex-col'>
-      <h1 className=' text-2xl font-semibold text-black'>Testimonial</h1>
-      <h2 className=' text-3xl font-bold text-black'>10000+ Unforgettable journeys</h2>
-      <div className=" flex gap-5 justify-center p-3 items-center">
-          <span className=" border-2 border-red-500 w-12 "></span>
-          <span className=" border-2 border-black w-5"></span>
-          <span className=" border-2 border-red-500 w-12"></span>
+      {/* Heading Section */}
+      <div className='mb-6 flex justify-center items-center flex-col text-center'>
+        <h1 className='text-xl sm:text-2xl font-semibold text-black'>Testimonial</h1>
+        <h2 className='text-2xl sm:text-3xl font-bold text-black mt-2'>
+          10000+ Unforgettable journeys
+        </h2>
+        <div className='flex gap-5 justify-center p-3 items-center'>
+          <span className='border-2 border-red-500 w-12'></span>
+          <span className='border-2 border-black w-5'></span>
+          <span className='border-2 border-red-500 w-12'></span>
         </div>
       </div>
+
+      {/* Carousel */}
       <Carousel
         height={250}
         slideSize={{ base: '100%', sm: '50%', md: '33.3333%' }}
@@ -69,17 +74,14 @@ function Testnimoinal() {
         transitionDuration={300}
       >
         {test.map((elem, index) => (
-          <Carousel.Slide key={index} className='flex justify-center  transition-all duration-500 ease-out'>
-            <div className='w-96 p-10 h-72 bg-white shadow-lg rounded-lg flex flex-col items-start justify-center relative border'>
-              {/* <div className='absolute top-0 right-0 bg-red-600 text-white rounded-full w-10 h-10 flex items-center justify-center text-sm font-bold'>
-                "
-              </div> */}
+          <Carousel.Slide key={index} className='flex justify-center transition-all duration-500 ease-out'>
+            <div className='w-full sm:w-96 p-6 sm:p-10 h-72 bg-white shadow-lg rounded-lg flex flex-col items-start justify-center relative border'>
               <p className='text-gray-700 text-sm'>{elem.testimonial}</p>
               <div className='mt-4 flex items-center gap-4'>
-                <img src={logo} alt='User' className='h-14 w-14 rounded-full border-2 border-gray-300' />
+                <img src={logo} alt='User' className='h-12 sm:h-14 w-12 sm:w-14 rounded-full border-2 border-gray-300' />
                 <div>
-                  <h1 className='text-md font-semibold text-gray-900'>{elem.name}</h1>
-                  <h2 className='text-red-600 text-sm font-medium'>{elem.designation}</h2>
+                  <h1 className='text-sm sm:text-md font-semibold text-gray-900'>{elem.name}</h1>
+                  <h2 className='text-red-600 text-xs sm:text-sm font-medium'>{elem.designation}</h2>
                   <span className='text-yellow-500'>{'⭐'.repeat(elem.rating)}</span>
                 </div>
               </div>
@@ -87,28 +89,9 @@ function Testnimoinal() {
           </Carousel.Slide>
         ))}
       </Carousel>
-
-      {/* Navigation Buttons - Show on Hover */}
-      {hover && (
-        <>
-          {/* <button
-            className='absolute top-[50%] -left-10 transform -translate-y-1/2 bg-neutral-100 text-red-500 p-3 rounded-full shadow-lg transition-opacity duration-300 border border-red-500'
-            onClick={() => embla && embla.scrollPrev()}
-          >
-            <IconArrowLeft size={24} />
-          </button>
-
-          <button
-            className='absolute top-[50%] -right-4 transform -translate-y-1/2 bg-neutral-100 text-red-500 p-3 rounded-full shadow-xl border border-red-500 transition-opacity duration-300'
-            onClick={() => embla && embla.scrollNext()}
-          >
-            <IconArrowRight size={24} />
-          </button> */}
-        </>
-      )}
-
+      {/* Dots Navigation */}
       <div className='flex justify-center mt-4 space-x-2'>
-        {[0,test.length-1].map((_, index) => (
+        {test.slice(0,2).map((_, index) => (
           <button
             key={index}
             onClick={() => embla && embla.scrollTo(index)}

@@ -20,8 +20,7 @@ const BrandFilter = () => {
     "CHEVROLET": "/images/chevrolet.png",
     "KIA": "https://mda.spinny.com/spinny-web/media/cars/makes/kia/logos/v1.webp",
     "TATA": "https://mda.spinny.com/spinny-web/media/cars/makes/tata/logos/tata.webp",
-    "NISSAN":"https://e7.pngegg.com/pngimages/132/969/png-clipart-nissan-car-logo-automotive-industry-brand-nissan-emblem-trademark.png"
-
+    "NISSAN": "https://e7.pngegg.com/pngimages/132/969/png-clipart-nissan-car-logo-automotive-industry-brand-nissan-emblem-trademark.png"
   };
 
   useEffect(() => {
@@ -30,7 +29,7 @@ const BrandFilter = () => {
 
   const fetchBrands = async () => {
     try {
-      const response = await fetch("https://car-dealer-backend-7m2r.onrender.com/productlist");
+      const response = await fetch("http://localhost:8000/productlist");
       const data = await response.json();
       if (data && data.length > 0) {
         const brandCounts = data.reduce((acc, item) => {
@@ -50,31 +49,40 @@ const BrandFilter = () => {
   };
 
   return (
-    <div className="brand-filter flex flex-col gap-10 justify-center items-center min-h-[40vh]">
-      <h2 className="font-semibold text-3xl">Explore Popular Brands</h2>
-      <div className="flex gap-5 items-center flex-wrap justify-center">
+    <div className="brand-filter flex flex-col gap-6 sm:gap-10 justify-center items-center min-h-[40vh] p-4 sm:p-8 lg:p-16">
+      {/* Heading */}
+      <h2 className="font-semibold text-2xl sm:text-3xl text-center">
+        Explore Popular Brands
+      </h2>
+
+      {/* Brand Buttons */}
+      <div className="flex flex-wrap gap-4 sm:gap-6 justify-center w-full">
         {brands.length > 0 ? (
           brands.map(([brand, count], index) => (
             <button
               key={index}
               onClick={() => handleBrandClick(brand)}
-              className="w-40 h-28 p-5 hover:bg-red-400 hover:scale-110 transition-all duration-300 ease-in-out flex flex-col justify-center items-center bg-neutral-200 rounded-lg shadow-md"
+              className="w-28 sm:w-36 h-24 sm:h-28 p-3 sm:p-4 hover:bg-red-400 hover:scale-105 transition-all duration-300 ease-in-out flex flex-col justify-center items-center bg-neutral-200 rounded-lg shadow-md"
             >
               <img
                 src={brandImages[brand] || "/images/default-car.png"}
                 alt={brand}
-                className="w-20 h-20 object-contain mb-2"
+                className="w-12 sm:w-16 h-12 sm:h-16 object-contain mb-1 sm:mb-2"
               />
-              <p className="text-lg font-semibold">{brand}</p>
-              <p className="text-sm">{count}+ cars</p>
+              <p className="text-sm sm:text-base font-semibold text-center">
+                {brand}
+              </p>
+              <p className="text-xs sm:text-sm text-center">{count}+ cars</p>
             </button>
           ))
         ) : (
           <p>Loading brands...</p>
         )}
       </div>
+
+      {/* View All Button */}
       <Link to={"/productlist"}>
-        <Button className="text-white font-semibold text-xl bg-[#e23b3d] px-8 py-1.5 mt-5 rounded-xl hover:bg-[#a3282a] mb-10">
+        <Button className="text-white font-semibold text-lg sm:text-xl bg-[#e23b3d] px-6 sm:px-8 py-1.5 mt-4 sm:mt-5 rounded-xl hover:bg-[#a3282a] mb-6 sm:mb-10 transition-all duration-300 shadow-lg">
           View All
         </Button>
       </Link>

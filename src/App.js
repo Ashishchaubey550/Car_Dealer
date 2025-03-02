@@ -30,8 +30,8 @@ function AppContent() {
   }, [location]);
 
   return (
-    <div className="h-full w-full relative">
-      <div className='relative'>
+    <div className="relative">
+      <div className='relative '>
         <Navbar />
         <Routes>
           {/* Define individual routes */}

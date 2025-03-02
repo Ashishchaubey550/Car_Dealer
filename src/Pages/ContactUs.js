@@ -6,18 +6,28 @@ function ContactUs() {
   return (
     <div className="min-h-[90vh] bg-neutral-300">
       <div className="relative w-full">
+        {/* Background Image */}
         <img
           src={Contactusbg}
-          alt=""
-          className="w-full h-[650px] object-cover blur-[3px] border-l-neutral-950"
+          alt="Contact Us Background"
+          className="w-full h-[400px] sm:h-[500px] md:h-[650px] object-cover blur-[3px] border-l-neutral-950"
         />
+
+        {/* Overlay */}
         <div className="absolute inset-0 bg-black bg-opacity-40"></div>
-        <div className="absolute inset-0 flex flex-col items-center justify-center">
-          <span className="border border-gray-300 w-96 mb-4"></span>
-          <h1 className=" text-center font-extrabold text-5xl text-white">
+
+        {/* Content */}
+        <div className="absolute inset-0 flex flex-col items-center justify-center p-4">
+          {/* Top Border */}
+          <span className="border border-gray-300 w-48 sm:w-64 md:w-96 mb-2 sm:mb-4"></span>
+
+          {/* Heading */}
+          <h1 className="text-center font-extrabold text-3xl sm:text-4xl md:text-5xl text-white">
             Contact us
           </h1>
-          <span className="border border-gray-300 w-96 mt-4"></span>
+
+          {/* Bottom Border */}
+          <span className="border border-gray-300 w-48 sm:w-64 md:w-96 mt-2 sm:mt-4"></span>
         </div>
       </div>
       <ContactUsAddress />
@@ -32,7 +42,7 @@ function ContactUs() {
           referrerPolicy="no-referrer-when-downgrade"
         ></iframe>
       </div>
-      <AboutUsContact/>
+      <AboutUsContact />
     </div>
   );
 }

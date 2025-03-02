@@ -11,7 +11,7 @@ const PriceFilter = ({ onPriceChange }) => {
     // Fetch price range from the backend
     const fetchPriceRange = async () => {
       try {
-        const response = await fetch("https://car-dealer-backend-7m2r.onrender.com/product");
+        const response = await fetch("http://localhost:8000/product");
         const data = await response.json();
         
         // Assuming the data contains `minPrice` and `maxPrice`
@@ -46,10 +46,10 @@ const PriceFilter = ({ onPriceChange }) => {
         max={maxPrice}
         value={priceRange}
         onChange={handlePriceChange}
-        trackStyle={[{ backgroundColor: "purple", height: 6 }]}
+        trackStyle={[{ backgroundColor: "purple", height: 6  }]}
         handleStyle={[
-          { borderColor: "purple", backgroundColor: "purple" },
-          { borderColor: "purple", backgroundColor: "purple" },
+          { borderColor: "purple", backgroundColor: "purple" , zIndex:-0 },
+          { borderColor: "purple", backgroundColor: "purple" , zIndex:-0 },
         ]}
       />
       <div className="flex justify-between text-gray-500 mt-2">

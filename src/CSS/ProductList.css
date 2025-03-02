@@ -162,3 +162,33 @@
         grid-template-columns: 1fr; 
     }
 }
+
+
+/* Mobile-first styles */
+.product-image {
+    height: 200px;
+    object-fit: cover;
+  }
+  
+  @media (min-width: 640px) {
+    .product-image {
+      height: 250px;
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .product-image {
+      height: 300px;
+    }
+  }
+  
+  /* Hide modal completely on mobile */
+  @media (max-width: 768px) {
+    .full-view-modal {
+      display: none !important;
+    }
+    
+    .ReactModal__Overlay {
+      display: none !important;
+    }
+  }

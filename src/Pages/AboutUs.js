@@ -1,24 +1,38 @@
 import React from "react";
-import banner from "../images/AboutCar.png";
+import Contactusbg from "../images/ContactUsbg.JPG";
+import ContactLocation from "../Components/ContactLocation";
+import AboutValueDrive from "../Components/AboutValueDrive";
+import BrandAssocation from "../Components/BrandAssocation";
+import FoundingTeamAbout from "../Components/FoundingTeamAbout";
+
 function AboutUs() {
   return (
-    <>
-      <div className="relative mix-h-[100vh]">
-        <div className="">
-          <img src={banner} alt="" className=" w-full" />
-        </div>
-        <h1 className=" font-bold text-[36px] leading-[62px] text-center -tracking-[25]">100X Mobility</h1>
-        <div className="w-[70%] text-center mx-auto text-2xl leading-2 font-normal mb-10">
-          <p>
-          We are already one of India’s largest auto-tech companies. But this is just the beginning. Our vision is to grow 100x in the next five years, seizing the rare opportunity to build a $300 billion enterprise in India.
-          </p>
-          <br></br>
-          <p>By harnessing cutting-edge technology, we aim to revolutionize mobility and positively transform lives—across India and beyond. Our approach is grounded in solving for scale, ensuring simplicity , and embracing sustainability in every facet of the automotive ecosystem. From empowering customers to driving industry-wide change, we are building the future of mobility—today.</p>
-          <br></br>
-          <p>We are on the journey of a lifetime and seeking those who share our hunger for growth and innovation.</p>
+    <div className="min-h-[90vh] bg-neutral-300">
+      {/* Banner Section */}
+      <div className="relative">
+        <img
+          src={Contactusbg}
+          alt="About Us Banner"
+          className="w-full h-[300px] md:h-[450px] lg:h-[650px] object-cover blur-[3px]"
+        />
+        <div className="absolute inset-0 bg-black bg-opacity-60"></div>
+        <div className="absolute inset-0 flex flex-col items-center justify-center">
+          <span className="border border-gray-300 w-48 md:w-64 lg:w-96 mb-4"></span>
+          <h1 className="text-center font-extrabold text-3xl md:text-4xl lg:text-5xl text-white">
+            About Us
+          </h1>
+          <span className="border border-gray-300 w-48 md:w-64 lg:w-96 mt-4"></span>
         </div>
       </div>
-    </>
+
+      {/* Child Components */}
+      <div className="space-y-12 py-12">
+        <AboutValueDrive />
+        <BrandAssocation />
+        <FoundingTeamAbout/>
+        <ContactLocation />
+      </div>
+    </div>
   );
 }
 

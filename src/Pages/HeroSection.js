@@ -29,27 +29,34 @@ function HeroSection() {
   return (
     <>
       <div className="min-h-[90vh] bg-neutral-100 relative">
-        <div className=" relative w-full">
-          <div>
-            <img
-              src={image7}
-              alt="welcome"
-              className="w-full h-[700px] object-cover"
-            />
-          </div>
-          <div className="absolute inset-0 bg-black bg-opacity-30"></div>
-          <div className=" absolute top-1/3 translate-x-[50%] text-white text-center w-fit">
-            <h1 className=" font-extrabold text-5xl ">
-              Welcome to <span className=" text-red-500">Value Drive</span>
-            </h1>
-            <h2 className=" text-center font-semibold mt-2 text-xl">
-              Your Trusted Partner for Quality Pre-Owned Cars
-            </h2>
-            <Link to={"/productList"}>
-            <Button className=" font-semibold text-xl bg-[#e23b3d] px-8 py-1.5 mt-5 rounded-xl hover:bg-[#a3282a]">View All Cars</Button>
-            </Link>
-          </div>
-        </div>
+<div className="relative w-full">
+  {/* Background Image */}
+  <div>
+    <img
+      src={image7}
+      alt="welcome"
+      className="w-full h-[300px] sm:h-[400px] md:h-[500px] lg:h-[700px] object-cover"
+    />
+  </div>
+
+  {/* Overlay */}
+  <div className="absolute inset-0 bg-black bg-opacity-30"></div>
+
+  {/* Content */}
+  <div className="absolute top-[65%] left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white text-center w-full px-4">
+    <h1 className="font-extrabold text-3xl sm:text-4xl md:text-5xl">
+      Welcome to <span className="text-red-500">Value Drive</span>
+    </h1>
+    <h2 className="font-semibold mt-2 text-lg sm:text-xl md:text-2xl">
+      Your Trusted Partner for Quality Pre-Owned Cars
+    </h2>
+    <Link to={"/productList"}>
+      <Button className="font-semibold text-lg sm:text-xl bg-[#e23b3d] px-6 py-1.5 mt-5 rounded-xl hover:bg-[#a3282a]">
+        View All Cars
+      </Button>
+    </Link>
+  </div>
+</div>
         <HowValueDriveWork/>
         <CarTypeFilter/>
         <BrandFilter/>
